@@ -9,9 +9,11 @@ public class PersonagemController : MonoBehaviour
     // Start is called before the first frame update
     public float jumpForce;
     public GameObject groundCheck;
+    private GroundCheck groundCheckScript;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        groundCheckScript = groundCheck.GetComponent<GroundCheck>();
     }
 
     // Update is called once per frame
@@ -22,10 +24,10 @@ public class PersonagemController : MonoBehaviour
         {
             rb2d.velocity += new Vector2(vel, 0) * HorizontalInput * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.Space))
+
+        if (Input.GetKey(KeyCode.Space) && groundCheckScript.isOnGround)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
         }
-
     }
 }

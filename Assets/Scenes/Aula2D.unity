@@ -294,7 +294,7 @@ MonoBehaviour:
   rb2d: {fileID: 175426254}
   vel: 19.23
   jumpForce: 8
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 1688028403}
 --- !u!1 &578665255
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 578665258}
   m_Layer: 0
   m_Name: "ch\xE3o"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,6 +534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688028404}
   - component: {fileID: 1688028405}
+  - component: {fileID: 1688028406}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -572,3 +573,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &1688028406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688028403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffffb2ddae39c0b4987ea4f8b837e30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnGround: 0
