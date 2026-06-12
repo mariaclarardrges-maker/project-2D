@@ -14,6 +14,7 @@ public class PersonagemController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         groundCheckScript = groundCheck.GetComponent<GroundCheck>();
+        
     }
 
     // Update is called once per frame
